@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { IoMoon, IoMoonOutline } from "react-icons/io5";
 
 import { Container } from "./Container";
-import { setTheme } from "../theme/theme-actions";
+import { setTheme } from "../store/theme/theme-actions";
 
 const HeaderEl = styled.header`
   box-shadow: var(--shadow);
