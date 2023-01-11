@@ -1,10 +1,11 @@
-import { pullAll } from "lodash"
-import { CLEAR_DETAILS, SET_COUNTRY, SET_ERROR, SET_LOADING } from "./details-actions"
+
+import { CLEAR_DETAILS, SET_COUNTRY, SET_ERROR, SET_LOADING, SET_NEIGHBOURS } from "./details-actions"
 
 const initialState = {
     currentCountry: null,
     status: "idle",
-    error: null
+    error: null,
+    neighbours: []
 }
 
 export const detailsReduser = (state = initialState, {type, payload}) => {
@@ -29,6 +30,11 @@ export const detailsReduser = (state = initialState, {type, payload}) => {
             }
         case CLEAR_DETAILS:
             return initialState
+        case SET_NEIGHBOURS:
+            return {
+                ...state,
+                neighbours: payload
+            }
         default:
             return state
      }

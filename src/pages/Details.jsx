@@ -4,7 +4,7 @@ import { IoArrowBack } from 'react-icons/io5';
 import { Button } from '../components/Button';
 import { Info } from '../components/Info';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectCurrentCountry, selectDetails } from '../store/details/details-selectors';
+import { selectDetails } from '../store/details/details-selectors';
 import { useEffect } from 'react';
 import { clearDetails, loadCountryByName } from '../store/details/details-actions';
 
